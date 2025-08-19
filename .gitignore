@@ -1,0 +1,21 @@
+# 빌드 결과물
+dist/
+
+# 의존성 폴더
+node_modules/
+
+# 환경 변수 파일
+.env
+.env.*
+
+# 테스트 결과 및 로그
+coverage/
+*.log
+jest-debug.log
+
+# VSCode 개인 설정
+.vscode/
+
+# OS 생성 불필요 파일
+.DS_Store
+Thumbs.db

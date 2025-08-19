@@ -1,0 +1,3 @@
+[submodule "agentica-lib"]
+	path = agentica-lib
+	url = https://github.com/wrtnlabs/agentica.git

@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": "./",
+
+    "baseUrl": ".",
+    "paths": {
+      "@db/*": ["backend/db/*"],
+      "@routes/*": ["backend/routes/*"],
+      "@functions/*": ["core/functions/*"],
+      "@notion/*": ["core/notion/*"],
+      "@llm/*": ["core/llm/*"],
+      "@utils/*": ["core/utils/*"]
+    },
+
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    
+    // ✅ typia 트랜스폼 플러그인 추가
+    "plugins": [
+      { "transform": "typia/lib/transform" }
+    ]
+  },
+  
+  // ✅ ts-node 설정 추가: ES 모듈 활성화
+  "ts-node": {
+    "esm": true,
+    "require": ["ts-node/register/transpile-only"]
+  },
+
+  "include": [
+    "backend/**/*",
+    "core/**/*",
+    "types/**/*",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
