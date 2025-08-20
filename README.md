@@ -39,7 +39,7 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 
 
 ### 🎥 Demo
-[![Watch the demo](./docs/images/projectIntro.png)](https://youtu.be/XXXXXXX)  
+[![Watch the demo](./docs/images/projectIntro.png)]([https://youtu.be/XXXXXXX](https://youtu.be/bSlSa404XV0?si=xT5DgR-NWj8aSvc1))  
 👉 Click above to watch the demo video
 
 
