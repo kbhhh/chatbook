@@ -38,6 +38,11 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
 
 
+### 🎥 Demo
+[![Watch the demo](./docs/images/projectIntro.png)](https://youtu.be/XXXXXXX)  
+👉 Click above to watch the demo video
+
+
 # 2. Architecture Structure  
 
 ![Architecture Structure](./docs/images/archi.drawio.png)  
