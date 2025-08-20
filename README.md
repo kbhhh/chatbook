@@ -1,4 +1,4 @@
-# 📖 ChatBook: AI Reading Companion  
+# ChatBook: AI Reading Companion  
 
 ChatBook is an AI-powered reading management system built on the **Agentica** framework.  
 It is designed to revive the depth and consistency of reading habits that are fading in today’s digital era.  
@@ -8,8 +8,6 @@ Through a conversational chatbot interface, ChatBook helps users build and susta
 
 ![ChatBook Identity](./docs/images/projectIntro.png)  
 *(Visual identity & branding for the project)*  
-
----
 
 ## 🎯 Motivation & Purpose  
 ChatBook is more than just a logging tool — it aims to become an **“AI reading partner that turns books into a daily habit.”**  
