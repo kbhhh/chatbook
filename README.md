@@ -51,7 +51,34 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 - **Notion**: Final user-facing interface where logs, plans, reflections, and recommendations are recorded in a structured template.
 
 
- # 3. Data Flow
+# 3. Core Features  
+
+### 📚 Automated Reading Logs  
+- Natural chatbot commands like *“Register Capital”* or *“I read 30 pages today”*  
+- Logs are stored in Oracle DB → synced to Notion **Bookshelf & Calendar**
+
+### 🗓 Reading Plans  
+- AI generates personalized **reading schedules** based on goals (e.g., finish in 7 days)  
+- Synced to Notion Calendar for daily tracking  
+
+### ✍️ Reflections  
+- Users record mid-reading thoughts or reviews via chatbot  
+- Stored as **Reflection entries** in Notion for later recall  
+
+### 💡 Book Recommendations  
+- LLM analyzes reading history + reflections  
+- Provides **personalized recommendations**, stored in Notion Recommendation DB  
+
+### 📊 Unified Dashboard (Notion Integration)  
+- Four linked databases in Notion:  
+  - **Bookshelf** → Registered books  
+  - **Calendar** → Plans & progress  
+  - **Reflection** → Reading notes  
+  - **Recommendation** → AI-suggested titles  
+- Keeps all reading data consistent and structured across platforms  
+
+
+ # 4. Data Flow
 
 The data flow of **ChatBook** ensures secure, structured, and automated synchronization between user input and the Notion interface.
 
@@ -82,7 +109,7 @@ The data flow of **ChatBook** ensures secure, structured, and automated synchron
 - **Scalability** with enterprise-level DB + lightweight Notion templates
 
 
-# 4. Installation & Setup  
+# 5. Installation & Setup  
 
 ### 📌 Requirements  
 - Node.js v18+  
@@ -127,7 +154,7 @@ ORACLE_CLIENT_PATH=      # path to Instant Client
 TNS_ADMIN=               # path containing sqlnet.ora, tnsnames.ora
 ````
 
-# 5. How to Run  
+# 6. How to Run  
 
 ### 📌 Backend  
 ```bash
@@ -147,7 +174,7 @@ npm run dev
 
 👉 Starts the Vite dev server at http://localhost:5173
 
-# 6. Project Structure  
+# 7. Project Structure  
 
 ```bash
 chatbook/
@@ -163,7 +190,7 @@ chatbook/
  ┗ README.md
 ````
 
-# 7. Oracle Cloud Security Highlights  
+# 8. Oracle Cloud Security Highlights  
 
 ### ☁️ Oracle Autonomous DB Integration  
 - All application data is stored in **Oracle Autonomous Database (ATP)**.  
