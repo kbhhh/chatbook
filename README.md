@@ -135,14 +135,14 @@ cd backend
 npm install
 # ts-node must be enabled via tsconfig.json
 npm run dev
-
+````
 👉 Starts the Express server at http://localhost:3001
 
-### 📌 Backend
+### 📌 Frontend
 ```bash
-cd backend
-npm install
-# ts-node must be enabled via tsconfig.json
+cd frontend
+npm install vite
 npm run dev
+````
 
-👉 Starts the Express server at http://localhost:3001
+👉 Starts the Vite dev server at http://localhost:5173
