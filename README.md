@@ -127,3 +127,22 @@ ORACLE_CLIENT_PATH=      # path to Instant Client
 TNS_ADMIN=               # path containing sqlnet.ora, tnsnames.ora
 
 
+# 5. How to Run  
+
+### 📌 Backend  
+```bash
+cd backend
+npm install
+# ts-node must be enabled via tsconfig.json
+npm run dev
+
+👉 Starts the Express server at http://localhost:3001
+
+### 📌 Backend
+```bash
+cd backend
+npm install
+# ts-node must be enabled via tsconfig.json
+npm run dev
+
+👉 Starts the Express server at http://localhost:3001
