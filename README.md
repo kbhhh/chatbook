@@ -6,6 +6,9 @@ As people become accustomed to quick searches and instant answers, their ability
 
 Through a conversational chatbot interface, ChatBook helps users build and sustain meaningful reading habits with ease.  
 
+![ChatBook Identity](./docs/images/projectIntro.png)  
+*(Visual identity & branding for the project)*  
+
 ---
 
 ## 🎯 Motivation & Purpose  
