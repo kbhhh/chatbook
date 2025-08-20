@@ -10,13 +10,13 @@ Through a conversational chatbot interface, ChatBook helps users build and susta
 ## 🎯 Motivation & Purpose  
 ChatBook is more than just a logging tool — it aims to become an **“AI reading partner that turns books into a daily habit.”**  
 
-- 📌 **Automated Reading Logs**  
+- **Automated Reading Logs**  
   → Simple prompts like *“Register Capital”* or *“I read 50 pages today”* are instantly recorded without manual entry.  
 
-- 📌 **Seamless Productivity Integration**  
+- **Seamless Productivity Integration**  
   → All records are synced in real-time to **Notion templates**, where users can view their bookshelf, calendar, reflections, and book recommendations.  
 
-- 📌 **Enhanced Learning Efficiency**  
+- **Enhanced Learning Efficiency**  
   → From reading schedules → reflections → personalized recommendations, ChatBook provides a consistent and structured reading journey.  
 
 
