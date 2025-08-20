@@ -179,7 +179,7 @@ npm run dev
 # 7. Project Structure  
 
 ```bash
-chatbook/
+webweb/
  ┣ backend/          # Express server, DB handlers (REST API, validation, Oracle integration)
  ┣ core/             # Agentica functions, LLM orchestration (summarization, recommendations, etc.)
  ┣ frontend/         # React + Vite + TypeScript chatbot UI
