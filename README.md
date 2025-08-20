@@ -38,7 +38,7 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
 
 
-# 2. 🏗️ Architecture Structure  
+# 2. Architecture Structure  
 
 ![Architecture Structure](./docs/images/archi.drawio.png)  
 
@@ -48,4 +48,36 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 - **Agentica + OpenAI**: Natural language requests are processed through LLM for classification, summarization, and reasoning.  
 - **Express Server**: Middleware that handles validation, mapping, and data transformation between systems.  
 - **Oracle Cloud (Autonomous DB)**: The single source of truth, storing structured relational data with secure mTLS.  
-- **Notion**: Final user-facing interface where logs, plans, reflections, and recommendations are recorded in a structured template.  
+- **Notion**: Final user-facing interface where logs, plans, reflections, and recommendations are recorded in a structured template.
+
+
+ # 3. Data Flow
+
+The data flow of **ChatBook** ensures secure, structured, and automated synchronization between user input and the Notion interface.
+
+![Data Flow](./docs/dataflow.drawio.png)
+
+### 🔹 Steps
+1) **Oracle DB (Autonomous)**
+   - **Source of Truth**: All relational data (normalized, FK relations)  
+   - Tables: `BOOK_INFO`, `READING_LOG`, `READING_PLAN`, `RECOMMENDATION`, `READING_PROGRESS`  
+   - Access secured via **mTLS** (mutual TLS)  
+
+2) **Express Server (Data Transformation Layer)**
+   - Maps and transforms **SQL ↔ JSON**  
+   - Provides REST API endpoints for frontend and Agentica  
+   - Handles validation, mapping rules, and business logic  
+
+3) **Notion Template DB**
+   - User-facing interface with **structured templates**  
+   - Four key templates:  
+     - 📚 **Bookshelf** (Book registration, metadata)  
+     - 📅 **Calendar** (Reading plans, schedules)  
+     - ✍️ **Reflection** (Reading notes, thoughts)  
+     - 💡 **Recommendation** (AI-powered suggestions)  
+
+👉 This flow guarantees:
+- **Data integrity** between Oracle and Notion  
+- **Real-time synchronization** of reading logs and reflections  
+- **Scalability** with enterprise-level DB + lightweight Notion templates
+
