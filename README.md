@@ -146,3 +146,44 @@ npm run dev
 ````
 
 👉 Starts the Vite dev server at http://localhost:5173
+
+# 6. Project Structure  
+
+```bash
+chatbook/
+ ┣ backend/          # Express server, DB handlers (REST API, validation, Oracle integration)
+ ┣ core/             # Agentica functions, LLM orchestration (summarization, recommendations, etc.)
+ ┣ frontend/         # React + Vite + TypeScript chatbot UI
+ ┣ oracle_wallet/    # OCI Wallet files for Autonomous DB (mTLS certificates & configs)
+ ┣ types/            # TypeScript type definitions for shared models
+ ┣ docs/images/      # Architecture & Data Flow diagrams
+ ┣ agentica.config.js # Agentica framework configuration
+ ┣ tsconfig.json     # TypeScript configuration
+ ┣ package.json      # Project dependencies
+ ┗ README.md
+````
+
+# 7. Oracle Cloud Security Highlights  
+
+### ☁️ Oracle Autonomous DB Integration  
+- All application data is stored in **Oracle Autonomous Database (ATP)**.  
+- Acts as the **single source of truth** with relational integrity (PK/FK enforced).  
+- Provides **auto-scaling, backup, and patching** directly on Oracle Cloud.  
+
+### 🔒 mTLS with OCI Wallet  
+- Every DB connection is secured via **mutual TLS (mTLS)**.  
+- **OCI Wallet** files (`cwallet.sso`, `sqlnet.ora`, `tnsnames.ora`) are required for authentication.  
+- Unauthorized clients cannot connect without the wallet + credentials.  
+- Ensures **end-to-end encryption** between Express backend ↔ Oracle Cloud DB.  
+
+### 🔑 Secure Credential Management  
+- Wallet path and DB credentials are injected via `.env` variables.  
+- No sensitive configs are committed thanks to `.gitignore`.  
+- `TNS_ADMIN` environment variable ensures the Instant Client always references the wallet securely.  
+
+### 🛡 Data Integrity & Reliability  
+- Oracle Cloud provides **transaction-level consistency** and **high availability**.  
+- Reading logs, book metadata, recommendations, and reflections are always synchronized with Notion.  
+- Guarantees both **enterprise-grade security** and **seamless user experience**.  
+
+👉 By combining **Oracle Autonomous DB + OCI Wallet (mTLS)**, ChatBook ensures a **cloud-native, secure, and scalable** reading management system.
