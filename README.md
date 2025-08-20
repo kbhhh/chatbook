@@ -81,3 +81,49 @@ The data flow of **ChatBook** ensures secure, structured, and automated synchron
 - **Real-time synchronization** of reading logs and reflections  
 - **Scalability** with enterprise-level DB + lightweight Notion templates
 
+
+# 4. Installation & Setup  
+
+### 📌 Requirements  
+- Node.js v18+  
+- Oracle Instant Client + **OCI Wallet** (for Autonomous DB mTLS connection)  
+- Notion account with API integration enabled  
+- Cloudinary account (for media uploads)  
+- Google Books API Key (for book search and metadata)  
+
+### 📌 Environment Variables (.env)  
+Create a `.env` file in the root directory and fill in the following values:  
+
+```bash
+# Server
+PORT=3001
+
+# LLM 
+OPENAI_API_KEY=
+
+# Notion integration
+NOTION_TOKEN=
+NOTION_DATABASE_ID=
+NOTION_READDATABASE_ID=
+RECOMMENDED_BOOK_DB_ID=
+NOTION_CALENDAR_DB_ID=
+NOTION_REVIEW_DB_ID=
+
+# Google Books API
+GOOGLE_BOOKS_API_KEY=
+
+# Cloudinary (media upload)
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_UPLOAD_PRESET=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+# Oracle Autonomous DB (mTLS)
+ORACLE_USER=
+ORACLE_PW=
+ORACLE_CONNECT=          # e.g. db2025_high
+ORACLE_WALLET_PATH=      # path to OCI Wallet
+ORACLE_CLIENT_PATH=      # path to Instant Client
+TNS_ADMIN=               # path containing sqlnet.ora, tnsnames.ora
+
+
