@@ -55,7 +55,7 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 
 The data flow of **ChatBook** ensures secure, structured, and automated synchronization between user input and the Notion interface.
 
-![Data Flow](./docs/dataflow.drawio.png)
+![Data Flow](./docs/images/dataflow.drawio.png)
 
 ### 🔹 Steps
 1) **Oracle DB (Autonomous)**
