@@ -40,3 +40,18 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 
 > 🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
 
+---
+
+> # 2. 🏗️ Architecture Structure  
+
+![Architecture Structure](./docs/images/archi.drawio.png)  
+
+---
+
+### 📌 Explanation  
+- **User & Chatbot UI**: Frontend built with React + Vite + TypeScript, providing a lightweight, interactive chat interface.  
+- **Agentica + OpenAI**: Natural language requests are processed through LLM for classification, summarization, and reasoning.  
+- **Express Server**: Middleware that handles validation, mapping, and data transformation between systems.  
+- **Oracle Cloud (Autonomous DB)**: The single source of truth, storing structured relational data with secure mTLS.  
+- **Notion**: Final user-facing interface where logs, plans, reflections, and recommendations are recorded in a structured template.  
+
