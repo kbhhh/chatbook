@@ -1,4 +1,4 @@
-# 📖 ChatBook: AI Reading Companion  
+# 1. ChatBook: AI Reading Companion  
 
 ChatBook is an AI-powered reading management system built on the **Agentica** framework.  
 It is designed to revive the depth and consistency of reading habits that are fading in today’s digital era.  
@@ -35,10 +35,10 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
   Reduce the burden of manual tracking and focus on building sustainable reading habits.  
 
 
-> 🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
+🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
 
 
-> # 2. 🏗️ Architecture Structure  
+# 2. 🏗️ Architecture Structure  
 
 ![Architecture Structure](./docs/images/archi.drawio.png)  
 
@@ -49,4 +49,3 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 - **Express Server**: Middleware that handles validation, mapping, and data transformation between systems.  
 - **Oracle Cloud (Autonomous DB)**: The single source of truth, storing structured relational data with secure mTLS.  
 - **Notion**: Final user-facing interface where logs, plans, reflections, and recommendations are recorded in a structured template.  
-
