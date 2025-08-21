@@ -185,7 +185,7 @@ npm run dev   # http://localhost:5173
 # 7. Project Structure  
 
 ```bash
-webweb/
+agenticaproject-chatbook/
  ┣ backend/          # Express server, Oracle DB handler
  ┣ core/             # Agentica functions & LLM orchestration
  ┣ frontend/         # React + Vite + TypeScript chatbot UI
@@ -210,7 +210,7 @@ webweb/
   - Transactional consistency
 
 
- # 9. Notion Integration
+# 9. Notion Integration
 
 ChatBook is fully integrated with **Notion templates**, providing users with a structured and interactive reading dashboard.
 
@@ -219,4 +219,4 @@ ChatBook is fully integrated with **Notion templates**, providing users with a s
 - ✍️ **Reflection** → Reading notes and reviews  
 - 💡 **Recommendation** → AI-powered suggestions  
 
-👉 [**ChatBook Notion Template**](https://www.notion.so/2397e4fff35f8097bfbd02dbbc40996)  
+👉 [**ChatBook Notion Template**](<공개한 퍼블릭 노션 링크>) 
