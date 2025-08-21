@@ -224,4 +224,4 @@ ChatBook is fully integrated with **Notion templates**, providing users with a s
 -  **Reflection** → Reading notes and reviews  
 -  **Recommendation** → AI-powered suggestions  
 
-👉 [**ChatBook Notion Template**](https://www.notion.so/2397e4ff35f8097bfdbd02dbbc409996)
+👉 [**ChatBook Notion Template**](https://glory-impala-26f.notion.site/2397e4fff35f8097bfdbd02dbbc40996?source=copy_link)
