@@ -209,6 +209,11 @@ agenticaproject-chatbook/
   - High availability  
   - Transactional consistency
 
+ ## 🔑 Oracle Wallet Access
+For security reasons, `oracle_wallet/` files are **not included** in this repository.  
+If you are a collaborator and need access, please contact the maintainer via email:  
+📧 grace159222@gmail.com
+
 
 # 9. Notion Integration
 
@@ -219,4 +224,4 @@ ChatBook is fully integrated with **Notion templates**, providing users with a s
 - ✍️ **Reflection** → Reading notes and reviews  
 - 💡 **Recommendation** → AI-powered suggestions  
 
-👉 [**ChatBook Notion Template**](<공개한 퍼블릭 노션 링크>) 
+👉 [**ChatBook Notion Template**](https://www.notion.so/2397e4ff35f8097bfdbd02dbbc409996)
