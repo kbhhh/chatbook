@@ -100,10 +100,10 @@ The data flow of **ChatBook** ensures secure, structured, and automated synchron
 3) **Notion Template DB**
    - User-facing interface with **structured templates**  
    - Four key templates:  
-     - 📚 **Bookshelf** (Book registration, metadata)  
-     - 📅 **Calendar** (Reading plans, schedules)  
-     - ✍️ **Reflection** (Reading notes, thoughts)  
-     - 💡 **Recommendation** (AI-powered suggestions)  
+     - **Bookshelf** (Book registration, metadata)  
+     -  **Calendar** (Reading plans, schedules)  
+     -  **Reflection** (Reading notes, thoughts)  
+     -  **Recommendation** (AI-powered suggestions)  
 
 👉 This flow guarantees:
 - **Data integrity** between Oracle and Notion  
@@ -209,7 +209,7 @@ agenticaproject-chatbook/
   - High availability  
   - Transactional consistency
 
- ## 🔑 Oracle Wallet Access
+### 🔑 Oracle Wallet Access
 For security reasons, `oracle_wallet/` files are **not included** in this repository.  
 If you are a collaborator and need access, please contact the maintainer via email:  
 📧 grace159222@gmail.com
@@ -219,9 +219,9 @@ If you are a collaborator and need access, please contact the maintainer via ema
 
 ChatBook is fully integrated with **Notion templates**, providing users with a structured and interactive reading dashboard.
 
-- 📚 **Bookshelf** → Registered books & metadata  
-- 📅 **Calendar** → Reading plans & schedules  
-- ✍️ **Reflection** → Reading notes and reviews  
-- 💡 **Recommendation** → AI-powered suggestions  
+-  **Bookshelf** → Registered books & metadata  
+-  **Calendar** → Reading plans & schedules  
+-  **Reflection** → Reading notes and reviews  
+-  **Recommendation** → AI-powered suggestions  
 
 👉 [**ChatBook Notion Template**](https://www.notion.so/2397e4ff35f8097bfdbd02dbbc409996)
