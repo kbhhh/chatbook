@@ -32,11 +32,11 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
   Reduce the burden of manual tracking and focus on building sustainable reading habits.  
 
 
-🚀 ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
+ChatBook is not just a record-keeping tool — it’s an AI companion that supports your entire reading life.
 
 
 ### 🎥 Demo
-[![Watch the demo](./docs/images/projectIntro.png)](https://youtu.be/bSlSa404XV0?si)
+[![Watch the demo](./docs/images/projectIntro.png)](https://youtu.be/PU2J9KJmKEk)
 👉 Click above to watch the demo video
 
 
@@ -45,7 +45,7 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 ![Architecture Structure](./docs/images/archi.drawio.png)  
 
 
-### 📌 Explanation  
+### Explanation  
 - **User & Chatbot UI**: Frontend built with React + Vite + TypeScript, providing a lightweight, interactive chat interface.  
 - **Agentica + OpenAI**: Natural language requests are processed through LLM for classification, summarization, and reasoning.  
 - **Express Server**: Middleware that handles validation, mapping, and data transformation between systems.  
@@ -80,13 +80,13 @@ ChatBook is more than just a logging tool — it aims to become an **“AI readi
 - Keeps all reading data consistent and structured across platforms  
 
 
- # 4. Data Flow
+# 4. Data Flow
 
 The data flow of **ChatBook** ensures secure, structured, and automated synchronization between user input and the Notion interface.
 
 ![Data Flow](./docs/images/dataFlow.drawio.png)
 
-### 🔹 Steps
+### Steps
 1) **Oracle DB (Autonomous)**
    - **Source of Truth**: All relational data (normalized, FK relations)  
    - Tables: `BOOK_INFO`, `READING_LOG`, `READING_PLAN`, `RECOMMENDATION`, `READING_PROGRESS`  
@@ -113,14 +113,14 @@ The data flow of **ChatBook** ensures secure, structured, and automated synchron
 
 # 5. Installation & Setup  
 
-### 📌 Requirements  
+### Requirements  
 - Node.js v18+  
 - Oracle Instant Client + **OCI Wallet** (for Autonomous DB mTLS connection)  
 - Notion account with API integration enabled  
 - Cloudinary account (for media uploads)  
 - Google Books API Key (for book search and metadata)  
 
-### 📌 Environment Variables (.env)  
+### Environment Variables (.env)  
 Create a `.env` file in the root directory and fill in the following values:  
 
 ```bash
@@ -154,65 +154,69 @@ ORACLE_CONNECT=          # e.g. db2025_high
 ORACLE_WALLET_PATH=      # path to OCI Wallet
 ORACLE_CLIENT_PATH=      # path to Instant Client
 TNS_ADMIN=               # path containing sqlnet.ora, tnsnames.ora
-````
+```
+
 
 # 6. How to Run  
 
-### 📌 Backend  
+⚠️ Note: If you encounter dependency errors during installation, run `npm install` separately inside each subdirectory (`backend`, `frontend`, `core`).  
+
 ```bash
-cd backend
+# 1. Clone the repository
+git clone https://github.com/dlawjdgus121/agenticaproject-chatbook.git
+cd webweb
+
+# 2. Install dependencies
 npm install
-# ts-node must be enabled via tsconfig.json
-npm run dev
-````
-👉 Starts the Express server at http://localhost:3001
+cd backend && npm install
+cd ../frontend && npm install
+cd ../core && npm install
 
-### 📌 Frontend
-```bash
+# 3. Run backend
+cd backend
+npm run dev   # http://localhost:3001
+
+# 4. Run frontend
 cd frontend
-npm install vite
-npm run dev
-````
+npm run dev   # http://localhost:5173
+```
 
-👉 Starts the Vite dev server at http://localhost:5173
 
 # 7. Project Structure  
 
 ```bash
 webweb/
- ┣ backend/          # Express server, DB handlers (REST API, validation, Oracle integration)
- ┣ core/             # Agentica functions, LLM orchestration (summarization, recommendations, etc.)
+ ┣ backend/          # Express server, Oracle DB handler
+ ┣ core/             # Agentica functions & LLM orchestration
  ┣ frontend/         # React + Vite + TypeScript chatbot UI
- ┣ oracle_wallet/    # OCI Wallet files for Autonomous DB (mTLS certificates & configs)
- ┣ types/            # TypeScript type definitions for shared models
- ┣ docs/images/      # Architecture & Data Flow diagrams
- ┣ agentica.config.js # Agentica framework configuration
- ┣ tsconfig.json     # TypeScript configuration
- ┣ package.json      # Project dependencies
+ ┣ oracle_wallet/    # (excluded) OCI Wallet files for DB connection
+ ┣ types/            # TypeScript shared types
+ ┣ docs/images/      # Architecture diagrams
+ ┣ agentica.config.js
+ ┣ tsconfig.json
+ ┣ package.json
  ┗ README.md
-````
+```
 
-# 8. Oracle Cloud Security Highlights  
 
-### ☁️ Oracle Autonomous DB Integration  
-- All application data is stored in **Oracle Autonomous Database (ATP)**.  
-- Acts as the **single source of truth** with relational integrity (PK/FK enforced).  
-- Provides **auto-scaling, backup, and patching** directly on Oracle Cloud.  
+# 8. Oracle Wallet & Security  
 
-### 🔒 mTLS with OCI Wallet  
-- Every DB connection is secured via **mutual TLS (mTLS)**.  
-- **OCI Wallet** files (`cwallet.sso`, `sqlnet.ora`, `tnsnames.ora`) are required for authentication.  
-- Unauthorized clients cannot connect without the wallet + credentials.  
-- Ensures **end-to-end encryption** between Express backend ↔ Oracle Cloud DB.  
+- All DB connections are secured with **Oracle Autonomous DB Wallet (mTLS)**.  
+- Wallet files are **NOT** included in the repository for security reasons.  
+- Each developer must configure the wallet locally and set environment variables (`TNS_ADMIN`, `ORACLE_WALLET_PATH`, etc.).  
+- The system runs on **Oracle ATP**, ensuring:  
+  - Automatic backup  
+  - High availability  
+  - Transactional consistency
 
-### 🔑 Secure Credential Management  
-- Wallet path and DB credentials are injected via `.env` variables.  
-- No sensitive configs are committed thanks to `.gitignore`.  
-- `TNS_ADMIN` environment variable ensures the Instant Client always references the wallet securely.  
 
-### 🛡 Data Integrity & Reliability  
-- Oracle Cloud provides **transaction-level consistency** and **high availability**.  
-- Reading logs, book metadata, recommendations, and reflections are always synchronized with Notion.  
-- Guarantees both **enterprise-grade security** and **seamless user experience**.  
+ # 9. Notion Integration
 
-👉 By combining **Oracle Autonomous DB + OCI Wallet (mTLS)**, ChatBook ensures a **cloud-native, secure, and scalable** reading management system.
+ChatBook is fully integrated with **Notion templates**, providing users with a structured and interactive reading dashboard.
+
+- 📚 **Bookshelf** → Registered books & metadata  
+- 📅 **Calendar** → Reading plans & schedules  
+- ✍️ **Reflection** → Reading notes and reviews  
+- 💡 **Recommendation** → AI-powered suggestions  
+
+👉 [**ChatBook Notion Template**](https://www.notion.so/2397e4fff35f8097bfbd02dbbc40996)  
